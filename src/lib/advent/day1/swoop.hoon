@@ -2,7 +2,17 @@
 ++  main
   |=  lst=(list @t)
   ^-  @t
-  (:(cork cords-to-nums compute num-to-cord) lst)
+  (:(cork cords-to-nums process compute num-to-cord) lst)
+++  process
+  |=  lst=(list @ud)
+  ^-  (list @ud)
+  ?~  lst  ~
+  ?~  t.lst  ~
+  ?~  t.t.lst  ~
+  %-  head
+  %^  spin  `(list @ud)`t.t.lst  [i.lst i.t.lst]
+  |=  [c=@ud [a=@ud b=@ud]]
+  [:(add a b c) [b c]]
 ++  compute
   |=  lst=(list @ud)
   ^-  @ud
