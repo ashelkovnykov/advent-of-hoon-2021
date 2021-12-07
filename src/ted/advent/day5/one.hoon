@@ -1,5 +1,5 @@
 /-  spider
-/+  strandio,  binary=advent-day3-binary
+/+  strandio,  implementation=advent-day5-one
 =,  strand=strand:spider
 ^-  thread:spider
 |=  arg=vase
@@ -9,4 +9,4 @@
 =/  bem=beam  ~|([%path-not-beam pth] (need (de-beam pth)))
 ;<  cge=cage  bind:m  (read-file:strandio bem)
 =+  !<(lst=(list @t) q.cge)
-(pure:m !>((main:binary lst)))
+(pure:m !>((main:implementation lst)))

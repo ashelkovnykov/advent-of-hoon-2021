@@ -1,5 +1,5 @@
 /-  spider
-/+  strandio,  vents=advent-day5-vents
+/+  strandio,  implementation=advent-day3-two
 =,  strand=strand:spider
 ^-  thread:spider
 |=  arg=vase
@@ -9,4 +9,4 @@
 =/  bem=beam  ~|([%path-not-beam pth] (need (de-beam pth)))
 ;<  cge=cage  bind:m  (read-file:strandio bem)
 =+  !<(lst=(list @t) q.cge)
-(pure:m !>((main:vents lst)))
+(pure:m !>((main:implementation lst)))
